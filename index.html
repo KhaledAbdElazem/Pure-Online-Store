@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKATSUKE Store</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>AKATSUKE</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="buttons">
+        <button class="search" onclick="openSearchModal()">🔍</button>
+        <button id="logIn"><a href="/logIn/logIn.html">LogIn</a></button>
+        <button id="signUp"><a href="/signUp/signUp.html">SignUp</a></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Welcome to AKATSUKE</h2>
+        <p>Your one-stop shop for premium products</p>
+        <button class="explore">Explore Products</button>
+      </section>
+
+      <section class="products" id="product-container">
+        <div class="card">
+          <img src="/imgs/Product1.png" alt="product" />
+          <h2>Product Name</h2>
+          <p>
+            Discover the best quality products that meet all your needs.
+          </p>
+          <button class="cardButton">See More</button>
+        </div>
+        <!-- You can add more product cards here -->
+      </section>
+    </main>
+    <dialog id="modal" style="display: none;">
+      <h3>Search for Products</h3>
+      <input type="search" placeholder="Type to search..." />
+      <button onclick="closeSearchModal()">Close</button>
+  </dialog>
+    <script src="./main.js"></script>
+  </body>
+</html>

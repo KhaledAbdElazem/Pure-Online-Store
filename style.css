@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background-image: url('/imgs/1\ gpihLbGadMOQH0fsjjV0vw.png'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This keeps the background image fixed during scrolling */
+    color: #333;
+    padding-top: 70px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ff5722;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Keep the header fixed at the top */
+    width: 100%; /* Ensure it spans the full width of the viewport */
+    top: 0; /* Align the header at the top */
+    left: 0; /* Align the header to the left side */
+    z-index: 1000; /* Ensure the header stays on top of other content */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav h1 {
+    margin-right: 50px;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background: none;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.search {
+    border: none;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    margin: 60px 0;
+    padding: 20px;
+    background-color: #ffccbc;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.explore {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.explore:hover {
+    background-color: #ff7043;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* creates four columns of equal width */
+    gap: 20px; /* maintains the space between grid items */
+    padding: 40px 0; /* keeps the existing padding at the top and bottom */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    max-width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.cardButton {
+    margin-top: auto;
+    padding: 12px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cardButton:hover {
+    background-color: #ff7043;
+}
+
+/* Search dialog */
+dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+dialog h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+dialog input {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+dialog button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+dialog button:hover {
+    background-color: #ff7043;
+}
+
+
+
+@media (max-width: 1200px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for even smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+}
